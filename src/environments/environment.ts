@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiUrl: 'http://www.datasciencetoolkit.org',
+  endPint: '/maps/api/geocode/json?sensor=false&address=',
   production: false
 };
 

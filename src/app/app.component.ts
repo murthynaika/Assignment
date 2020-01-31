@@ -1,4 +1,3 @@
-import { DataServiceService } from './data-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,19 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private service: DataServiceService) { }
 
+  /** To store search data */
+  public cityName = '';
+
+  constructor() { }
 
   ngOnInit() {
-    this.service.getDetails().subscribe((response) => {
-      console.log('tt' + response);
-    });
   }
 
-
-  onClick() {
-    this.service.getDetails().subscribe((response) => {
-      console.log('tt' + response);
-    });
-  }
 }

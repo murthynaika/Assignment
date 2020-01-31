@@ -1,0 +1,20 @@
+<div>
+    <button role ="button" type="button" class="btn btn-primary" (click)="onClick()">Submit</button>
+
+    <div *ngIf="result; else noResults" class="details mt-3">
+        <div *ngIf="showDetails" >
+        <h5>Latitude : <span>{{locationData?.lng}}</span></h5>
+        <h5>Longitude :<span> {{locationData?.lat}}</span></h5>
+        </div>
+    </div>
+</div>
+
+<ng-template #noResults >
+    <p  class="mt-3 text-warning">No details available for the location.
+        Please enter valid Location.</p>
+</ng-template>
+
+<div  *ngIf="showError" class="alert col-md-3">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <strong>Error!</strong> {{errorMsg}}
+  </div>
